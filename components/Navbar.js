@@ -227,7 +227,7 @@ const Navbar = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-700 via-pink-700 to-cyan-700 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
                 <div className="relative flex items-center justify-center space-x-3">
                   <BiRocket className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-                  <span>Let's Work Together</span>
+                  <span>Let&#39;s Work Together</span>
                 </div>
               </button>
             </div>
