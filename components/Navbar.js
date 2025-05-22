@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { HiMenu, HiX, HiCode, HiSparkles } from "react-icons/hi";
-import { FaGithub, FaLinkedin, FaTwitter, FaDownload } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter,FaInstagram, FaDownload } from "react-icons/fa";
 import { BiRocket } from "react-icons/bi";
 
 const Navbar = () => {
@@ -31,21 +31,21 @@ const Navbar = () => {
   const socialLinks = [
     {
       icon: FaGithub,
-      href: "https://github.com/yourusername",
+      href: "https://github.com/Anasmalik57",
       label: "GitHub",
       color: "hover:text-gray-300",
     },
     {
       icon: FaLinkedin,
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://www.linkedin.com/in/anasmalik57/",
       label: "LinkedIn",
       color: "hover:text-blue-400",
     },
     {
-      icon: FaTwitter,
-      href: "https://twitter.com/yourusername",
+      icon: FaInstagram,
+      href: "https://www.instagram.com/anas.malik5022/",
       label: "Twitter",
-      color: "hover:text-sky-400",
+      color: "hover:text-red-400",
     },
   ];
 
@@ -129,10 +129,12 @@ const Navbar = () => {
 
               {/* CTA Buttons */}
               <div className="flex items-center space-x-2 lg:space-x-3">
-                <button className="hidden lg:flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-300 hover:text-white border border-gray-700 hover:border-gray-600 rounded-xl hover:bg-white/5 transition-all duration-300">
+                <Link
+                href={"/resume.pdf"}
+                download={true} className="hidden lg:flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-300 hover:text-white border border-gray-700 hover:border-gray-600 rounded-xl hover:bg-white/5 transition-all duration-300">
                   <FaDownload className="w-4 h-4" />
                   <span>Resume</span>
-                </button>
+                </Link>
 
                 <button className="relative group px-4 lg:px-6 py-2 lg:py-3 text-sm lg:text-base font-bold text-white rounded-xl overflow-hidden transition-all duration-300 hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 transition-all duration-300"></div>
@@ -217,10 +219,14 @@ const Navbar = () => {
 
             {/* Mobile CTA Buttons */}
             <div className="space-y-3 pt-4">
-              <button className="w-full flex items-center justify-center space-x-3 px-6 py-4 text-gray-300 hover:text-white border border-gray-700 hover:border-gray-600 rounded-xl hover:bg-white/5 transition-all duration-300">
+              <Link
+                href={"/resume.pdf"}
+                download={true}
+                className="w-full flex items-center justify-center space-x-3 px-6 py-4 text-gray-300 hover:text-white border border-gray-700 hover:border-gray-600 rounded-xl hover:bg-white/5 transition-all duration-300"
+              >
                 <FaDownload className="w-5 h-5" />
                 <span className="text-lg font-medium">Download Resume</span>
-              </button>
+              </Link>
 
               <button className="w-full relative group px-6 py-4 text-lg font-bold text-white rounded-xl overflow-hidden transition-all duration-300">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600"></div>
