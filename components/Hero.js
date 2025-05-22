@@ -31,6 +31,28 @@ import {
   SiPython,
 } from "react-icons/si";
 
+import { Anta } from "next/font/google";
+import { Dancing_Script } from "next/font/google";
+
+// Anta font configure
+const anta = Anta({
+  weight: "400",
+  subsets: ["latin"],
+});
+// Dancing Script font configure
+const dancingScript = Dancing_Script({
+  weight: ["400", "700"], // available weights: 400, 500, 600, 700
+  subsets: ["latin"],
+});
+import { Comic_Neue } from "next/font/google";
+
+const comicNeue = Comic_Neue({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
+
+
+
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -38,9 +60,9 @@ const Hero = () => {
 
   const roles = [
     "Full Stack Developer",
-    "MERN Stack Expert",
-    "Next.js Specialist",
     "UI/UX Enthusiast",
+    "Freelancer",
+    "Next.js Developer",
     "Tech Innovator",
   ];
 
@@ -349,7 +371,7 @@ const Hero = () => {
           >
             <span className="relative">
               <motion.span
-                className="bg-gradient-to-r from-white via-purple-200 via-pink-200 to-cyan-200 bg-clip-text text-transparent"
+                className={`${dancingScript.className}  bg-gradient-to-r from-white via-purple-200  to-cyan-200 bg-clip-text text-transparent`}
                 animate={{
                   backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                 }}
@@ -374,13 +396,13 @@ const Hero = () => {
             className="mb-8 h-16 flex items-center justify-center"
             variants={itemVariants}
           >
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-300">
-              Elite{" "}
-              <span className="relative inline-block">
+            <h2 className={`${dancingScript.className} text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-300`}>
+              I&#39;am a{" "}
+              <span className={`${anta.className} relative inline-block`}>
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={currentRole}
-                    className="bg-gradient-to-r from-purple-400 via-pink-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent"
+                    className="bg-gradient-to-r from-purple-400 via-pink-400  to-emerald-400 bg-clip-text text-transparent"
                     variants={slideVariants}
                     initial="enter"
                     animate="center"
@@ -390,7 +412,7 @@ const Hero = () => {
                   </motion.span>
                 </AnimatePresence>
                 <motion.div
-                  className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-purple-400 via-pink-400 via-cyan-400 to-emerald-400 rounded-full"
+                  className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-purple-400 via-pink-400  to-emerald-400 rounded-full"
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{
@@ -398,7 +420,7 @@ const Hero = () => {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                />
+                ></motion.div>
               </span>
             </h2>
           </motion.div>
@@ -455,7 +477,7 @@ const Hero = () => {
                 transition={{ duration: 0.5 }}
                 style={{ originX: 0 }}
               />
-              <div className="relative flex items-center justify-center space-x-3">
+              <div className="relative group flex items-center justify-center space-x-3">
                 <motion.div
                   whileHover={{ rotate: 12 }}
                   transition={{ duration: 0.3 }}
@@ -464,9 +486,10 @@ const Hero = () => {
                 </motion.div>
                 <span>Start Your Project</span>
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
+                  // initial={{ opacity: 0 }}
+                  // whileHover={{ opacity: 1 }}
+                  // transition={{ duration: 0.3 }}
+                  className="opacity-0 group-hover:opacity-100"
                 >
                   <HiSparkles className="w-5 h-5" />
                 </motion.div>
@@ -525,7 +548,7 @@ const Hero = () => {
               {techStack.map((tech, index) => (
                 <motion.div
                   key={tech.name}
-                  className={`group relative flex flex-col items-center space-y-3 p-4 sm:p-6 rounded-2xl border border-gray-800 hover:border-gray-600 bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm ${tech.glow}`}
+                  className={`group cursor-pointer relative flex flex-col items-center space-y-3 p-4 sm:p-6 rounded-2xl border border-gray-800 hover:border-gray-600 bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm ${tech.glow}`}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -564,7 +587,7 @@ const Hero = () => {
             {achievements.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                className="group relative p-8 rounded-3xl border border-gray-800 hover:border-gray-600 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm"
+                className="group cursor-pointer relative p-8 rounded-3xl border border-gray-800 hover:border-gray-600 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
