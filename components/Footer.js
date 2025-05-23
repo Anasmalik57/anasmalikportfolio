@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { HiCode, HiSparkles, HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
-import { FaGithub, FaLinkedin, FaTwitter, FaHeart, FaArrowUp } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaHeart, FaArrowUp, FaInstagram } from "react-icons/fa";
 import { BiRocket } from "react-icons/bi";
 import { useState, useEffect } from "react";
 
@@ -26,31 +26,31 @@ const Footer = () => {
   };
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/home" },
+    { name: "About", href: "/about" },
+    { name: "Skills", href: "/skills" },
+    { name: "Projects", href: "/projects" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const socialLinks = [
     {
       icon: FaGithub,
-      href: "https://github.com/yourusername",
+      href: "https://github.com/Anasmalik57",
       label: "GitHub",
       color: "hover:text-gray-300",
     },
     {
       icon: FaLinkedin,
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://linkedin.com/in/anasmalik57",
       label: "LinkedIn",
       color: "hover:text-blue-400",
     },
     {
-      icon: FaTwitter,
-      href: "https://twitter.com/yourusername",
+      icon: FaInstagram,
+      href: "https://www.instagram.com/anas.malik5022",
       label: "Twitter",
-      color: "hover:text-sky-400",
+      color: "hover:text-red-400",
     },
   ];
 
@@ -58,8 +58,8 @@ const Footer = () => {
     {
       icon: HiMail,
       label: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com",
+      value: "developeranas738@gmail.com",
+      href: "mailto:developeranas738@gmail.com",
     },
     {
       icon: HiPhone,
@@ -70,8 +70,8 @@ const Footer = () => {
     {
       icon: HiLocationMarker,
       label: "Location",
-      value: "Your City, Country",
-      href: "#",
+      value: "Roorkee, India",
+      href: "https://maps.app.goo.gl/W3M9XAPGPeWhRkMu7",
     },
   ];
 
@@ -89,7 +89,7 @@ const Footer = () => {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-40 p-4 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 hover:from-purple-700 hover:via-pink-700 hover:to-cyan-700 text-white rounded-full shadow-2xl hover:scale-110 transition-all duration-300 group"
+          className="cursor-pointer fixed bottom-8 right-8 z-40 p-4 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 hover:from-purple-700 hover:via-pink-700 hover:to-cyan-700 text-white rounded-full shadow-2xl hover:scale-110 transition-all duration-300 group"
           aria-label="Scroll to top"
         >
           <FaArrowUp className="w-5 h-5 group-hover:animate-bounce" />
@@ -115,7 +115,7 @@ const Footer = () => {
               {/* Brand Section */}
               <div className="lg:col-span-1">
                 <div className="group mb-8">
-                  <Link href="#home" className="flex items-center space-x-3">
+                  <Link href="/home" className="flex items-center space-x-3">
                     <div className="relative">
                       <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-full blur opacity-60 group-hover:opacity-100 transition duration-500"></div>
                       <div className="relative w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center">
@@ -205,6 +205,7 @@ const Footer = () => {
                     <a
                       key={contact.label}
                       href={contact.href}
+                      target="_blank"
                       className="flex items-start space-x-3 text-gray-400 hover:text-white transition-colors duration-300 group"
                     >
                       <div className="p-2 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-lg group-hover:from-purple-500/20 group-hover:to-cyan-500/20 transition-all duration-300 mt-0.5">
@@ -246,13 +247,13 @@ const Footer = () => {
               
               <div className="flex items-center space-x-6">
                 <Link
-                  href="#privacy"
+                  href="/privacy"
                   className="text-sm text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   Privacy Policy
                 </Link>
                 <Link
-                  href="#terms"
+                  href="/terms"
                   className="text-sm text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   Terms of Service

@@ -11,6 +11,7 @@ import {
   FaArrowDown,
   FaStar,
   FaCheckCircle,
+  FaInstagram,
 } from "react-icons/fa";
 import {
   HiCode,
@@ -45,13 +46,12 @@ const dancingScript = Dancing_Script({
   subsets: ["latin"],
 });
 import { Comic_Neue } from "next/font/google";
+import Link from "next/link";
 
 const comicNeue = Comic_Neue({
   weight: ["400", "700"],
   subsets: ["latin"],
 });
-
-
 
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -396,7 +396,9 @@ const Hero = () => {
             className="mb-8 h-16 flex items-center justify-center"
             variants={itemVariants}
           >
-            <h2 className={`${dancingScript.className} text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-300`}>
+            <h2
+              className={`${dancingScript.className} text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-300`}
+            >
               I&#39;am a{" "}
               <span className={`${anta.className} relative inline-block`}>
                 <AnimatePresence mode="wait">
@@ -634,7 +636,7 @@ const Hero = () => {
             variants={itemVariants}
           >
             <motion.a
-              href="https://github.com/yourusername"
+              href="https://github.com/Anasmalik57"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative p-4 text-gray-400 hover:text-white border-2 border-gray-800 hover:border-gray-600 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm"
@@ -653,7 +655,7 @@ const Hero = () => {
               </motion.div>
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/anasmalik57"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative p-4 text-gray-400 hover:text-blue-400 border-2 border-gray-800 hover:border-blue-500/50 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm hover:bg-blue-500/10"
@@ -672,10 +674,10 @@ const Hero = () => {
               </motion.div>
             </motion.a>
             <motion.a
-              href="https://twitter.com/yourusername"
+              href="https://www.instagram.com/anas.malik5022/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative p-4 text-gray-400 hover:text-sky-400 border-2 border-gray-800 hover:border-sky-500/50 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm hover:bg-sky-500/10"
+              className="group relative p-4 text-gray-400 hover:text-red-400 border-2 border-gray-800 hover:border-sky-500/50 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm hover:bg-sky-500/10"
               whileHover={{
                 scale: 1.1,
                 y: -4,
@@ -687,7 +689,7 @@ const Hero = () => {
                 whileHover={{ rotate: 12 }}
                 transition={{ duration: 0.3 }}
               >
-                <FaTwitter className="w-6 h-6" />
+                <FaInstagram className="w-6 h-6" />
               </motion.div>
             </motion.a>
             <motion.button
@@ -699,12 +701,14 @@ const Hero = () => {
               }}
               whileTap={{ scale: 0.95 }}
             >
-              <motion.div
-                whileHover={{ y: [-2, 2, -2] }}
-                transition={{ duration: 0.3, repeat: Infinity }}
-              >
-                <FaDownload className="w-6 h-6" />
-              </motion.div>
+              <Link href={"/resume.pdf"} download >
+                <motion.div
+                  whileHover={{ y: [-2, 2, -2] }}
+                  transition={{ duration: 0.3, repeat: Infinity }}
+                >
+                  <FaDownload className="w-6 h-6" />
+                </motion.div>
+              </Link>
             </motion.button>
           </motion.div>
 
