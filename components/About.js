@@ -340,7 +340,7 @@ const About = () => {
                 <div className="space-y-6 animate-fadeIn">
                   <div className="prose prose-invert max-w-none">
                     <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                      Hello! I'm a passionate Full Stack Developer with over 3
+                      Hello! I&#39;m a passionate Full Stack Developer with over 3
                       years of experience creating digital solutions that make a
                       difference. I specialize in React, Node.js, and modern web
                       technologies to build scalable, user-friendly
@@ -349,14 +349,14 @@ const About = () => {
 
                     <p className="text-gray-400 leading-relaxed mb-6">
                       My journey in web development started with a curiosity
-                      about how things work on the internet. Today, I've had the
+                      about how things work on the internet. Today, I&#39;ve had the
                       privilege of working with startups, agencies, and
                       established companies, helping them bring their digital
                       visions to life.
                     </p>
 
                     <p className="text-gray-400 leading-relaxed">
-                      When I'm not coding, you'll find me exploring new
+                      When I&#39;m not coding, you&#39;ll find me exploring new
                       technologies, contributing to open-source projects, or
                       sharing my knowledge through tech blogs and community
                       meetups. I believe in continuous learning and staying
