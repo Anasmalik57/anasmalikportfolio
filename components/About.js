@@ -75,32 +75,32 @@ const About = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const stats = [
-    {
-      icon: HiTrendingUp,
-      label: "Years Experience",
-      value: animatedStats.experience + "+",
-      color: "from-purple-500 to-pink-500",
-    },
-    {
-      icon: HiCode,
-      label: "Projects Completed",
-      value: animatedStats.projects + "+",
-      color: "from-pink-500 to-cyan-500",
-    },
-    {
-      icon: HiHeart,
-      label: "Happy Clients",
-      value: animatedStats.clients + "+",
-      color: "from-cyan-500 to-blue-500",
-    },
-    {
-      icon: BiCoffee,
-      label: "Cups of Coffee",
-      value: animatedStats.coffee + "+",
-      color: "from-orange-500 to-red-500",
-    },
-  ];
+//   const stats = [
+//     {
+//       icon: HiTrendingUp,
+//       label: "Years Experience",
+//       value: animatedStats.experience + "+",
+//       color: "from-purple-500 to-pink-500",
+//     },
+//     {
+//       icon: HiCode,
+//       label: "Projects Completed",
+//       value: animatedStats.projects + "+",
+//       color: "from-pink-500 to-cyan-500",
+//     },
+//     {
+//       icon: HiHeart,
+//       label: "Happy Clients",
+//       value: animatedStats.clients + "+",
+//       color: "from-cyan-500 to-blue-500",
+//     },
+//     {
+//       icon: BiCoffee,
+//       label: "Cups of Coffee",
+//       value: animatedStats.coffee + "+",
+//       color: "from-orange-500 to-red-500",
+//     },
+//   ];
 
   const skills = {
     frontend: [
@@ -221,7 +221,7 @@ const About = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 lg:mb-20">
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 lg:mb-20">
           {stats.map((stat, index) => (
             <div key={stat.label} className="group relative">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-pink-600/10 to-cyan-600/10 rounded-2xl blur group-hover:blur-lg transition-all duration-300"></div>
@@ -238,7 +238,7 @@ const About = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Main Content */}
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
